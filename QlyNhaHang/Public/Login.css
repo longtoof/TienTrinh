@@ -1,0 +1,126 @@
+﻿*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Roboto;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-image:url('/Public/image/background.png') ;
+}
+.containers{
+    position:relative;
+    max-width:430px;
+    width:100%;
+    background:white;
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius:10px;
+} 
+.containers .form{
+    padding:30px;
+    width:50%;
+
+}
+.containers .form .title{
+    font-size:27px;
+    font-weight:600;
+    position:relative;
+}
+.forms .title::before{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:30px;
+    height:3px;
+    background-color:dimgray;
+    border-radius:25px;
+}
+.forms .input-field{
+    margin-top:30px;
+    background-color:darkslateblue;
+    position:relative;
+    height:50px;
+    width:100%;
+}
+.input-field input{
+    height:100%;
+    position:absolute;
+    padding:0 35px;
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:16px;
+    border-bottom:2px solid #ccc;
+    transition:all 0.2s ease;
+    
+}
+.input-field input:is(:focus, :valid){
+    border-bottom-color:lightslategrey;
+}
+.input-field i{
+    position:absolute;
+    top:50%;
+    left:0;
+    transform:translateY(-50%);
+    font-size:23px;
+}
+.input-field input:is(:focus, :valid) ~ is{
+    border-bottom-color: lightslategrey;
+}
+.input-field i.icon{
+    left:0;
+}
+    .input-field i.showHide{
+        margin-left:95%;
+        cursor:pointer;
+    }
+.form .checkbox-text{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+}
+checkbox-text .checkbox-content{
+    display:flex;
+    align-items:center;
+}
+.checkbox-content input{
+    accent-color:#4070f4;
+    margin:0 8px 0 4px;
+}
+.form .text{
+    color:#333;
+    font-size:14px;
+}
+.form a.text{
+    text-decoration:none;
+}
+.form a:hover{
+    text-decoration:underline;
+}
+
+.form .button{
+    margin-top:35px;
+}
+.form .button input{
+    border:none;
+    color:white;
+    letter-spacing:1px;
+    border-radius:6px;
+    background-color:slategray;
+    font-weight:500;
+    font-size:17px;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+.button input:hover{
+    background-color:lightslategrey;
+}
+.form .login-signup{
+    margin-top:30px;
+    text-align:center;
+}

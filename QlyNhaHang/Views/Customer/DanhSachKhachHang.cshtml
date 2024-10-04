@@ -1,0 +1,70 @@
+﻿@model IEnumerable<QlyNhaHang.Models.KhackHang>
+
+@{
+    ViewBag.Title = "DanhSachKhachHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DanhSachKhachHang</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ten_KH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_KhachHang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RePassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TK)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ten_KH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_KhachHang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RePassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TK)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
